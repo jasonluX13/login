@@ -23,5 +23,5 @@ def logout():
 
 if __name__=="__main__":
     app.debug=True
-    app.secret_key="M"
+    app.secret_key="Captian Swanson"
     app.run()
