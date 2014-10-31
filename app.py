@@ -23,5 +23,5 @@ def logout():
 
 if __name__=="__main__":
     app.debug=True
-    app.secret_key="this key shouldn't be on github"
+    app.secret_key="M"
     app.run()
