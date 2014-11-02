@@ -63,9 +63,10 @@
 
 
         <ul>
-          <li class="pure-menu-selected"><a href="#">Home</a></li>
-          <li><a href="#">Tour</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li class="pure-menu-selected"><a href="/">Home</a></li>
+          <li><a href="/Tour">Tour</a></li>
+          <li><a href="/login">Sign In</a></li>
+          <li><a href="/">Sign Up</a></li>
         </ul>
       </div>
     </div>
@@ -78,7 +79,9 @@
           By: Jason Lu and Nathaniel Brassell
         </p>
         <p>
-          <input type="submit" class="pure-button pure-button-primary" name="Login" action="/login" value="Login">
+          <form method="Post" action="/login">
+          <input type="submit" class="pure-button pure-button-primary" name="login" value="Login"></input>
+          </form>
         </p>
       </div>
     </div>
@@ -100,7 +103,7 @@
               <label for="password">Your Password</label>
               <input id="password" type="password" placeholder="Your Password">
 
-              <button type="submit" class="pure-button">Sign Up</button>
+              <button type="submit" class="pure-button" name="SignUp">Sign Up</button>
             </fieldset>
           </form>
         </div>

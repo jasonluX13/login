@@ -1,23 +1,24 @@
-from pymongo import Connection
-from flask import Flask, render_template,session,redirect
+#from pymongo import Connection
+from flask import Flask, render_template,session,redirect,request
 
 app= Flask(__name__)
 
-@app.route("/")
+@app.route("/",methods=["GET","POST"])
 def index():
-    '''
-    if 'n' not in session:
-        session['n']=0
-        
-    n = session['n']
-    n=n+1
-    session['n']=n
-    '''
-    return render_template("index.html")
+    if request.method == "GET":
+        return render_template("index.html")
+    else:
+        button = request.form["SignUp"]
+        #add username and password
+        return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login",methods=["GET","POST"])
 def login():
     return render_template("login.html")
+    
+@app.route("/Tour",methods=["GET","POST"])
+def tour():
+    return render_template("Tour.html")
 
 '''
 @app.route("/logout")
