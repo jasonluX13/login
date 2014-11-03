@@ -16,6 +16,15 @@ def index():
 @app.route("/login",methods=["GET","POST"])
 def login():
     return render_template("login.html")
+
+@app.route("/user/<username>",methods=["GET","POST"])
+def user(username = None):
+    if request.method == "GET":
+        session['username'] = request.form['username']
+        return render_template('user.html',
+                               username = request.form['username'])
+#actually put this in login() ^    
+  
     
 @app.route("/Tour",methods=["GET","POST"])
 def tour():
