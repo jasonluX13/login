@@ -12,7 +12,7 @@ def insert(username, password):
         }
         users.insert(new_user)
     else:
-        print "User exists."
+        print("User exists")
         
 def user_exists(username):
     return users.find({"username" : username}).count() > 0
@@ -21,10 +21,10 @@ def remove(username):
     users.remove({"username" : username})
     
 def authenticate(username,password):
-    if(user_exists(username):
+    if(user_exists(username)):
         s = users.find({"name": username},{"_id": False})
         return s['password'] == password
     else:
         return -1
         
-if __name__ == "__main__":
+#if __name__ == "__main__":

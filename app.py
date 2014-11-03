@@ -1,5 +1,6 @@
 #from pymongo import Connection
 from flask import Flask, render_template,session,redirect,request
+import mongo_help
 
 app= Flask(__name__)
 
